@@ -1,13 +1,13 @@
 {% set name = "wagtail-factories" %}
-{% set version = "4.1.0" %}
+{% set version = "4.2.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/wagtail/wagtail-factories/archive/v{{ version }}.tar.gz
-  sha256: 397e3c7dee90eb7295536959f912717c23be9ff3f1f3d6af0335e86d91026f2b
+  url: https://github.com/wagtail/wagtail-factories/archive/{{ version }}.tar.gz
+  sha256: 1bd25aa44206b5f291fc845b289d87fa238f298d154eea0680fb2aff5f2cba82
 
 build:
   noarch: python
