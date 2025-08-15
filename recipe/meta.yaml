@@ -1,18 +1,18 @@
 {% set name = "wagtail-factories" %}
-{% set version = "4.2.1" %}
+{% set version = "4.3.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/wagtail/wagtail-factories/archive/{{ version }}.tar.gz
-  sha256: 46956f06afa8e4b3439eb5eebf8272dfae8e797b04961cb801a3e12e5fbcf26c
+  url: https://github.com/wagtail/wagtail-factories/archive/v{{ version }}.tar.gz
+  sha256: 24b46ba6994b861cf2f13722ffc5b523a4c64e4027d1e43f98e2a1f1793a52da
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -20,9 +20,10 @@ requirements:
     - pip
     - setuptools
   run:
+    - django
     - python >={{ python_min }}
-    - factory_boy >=3.2
-    - wagtail >=4.1
+    - factory_boy >=3.2,<4
+    - wagtail >=6.3
 
 test:
   source_files:
