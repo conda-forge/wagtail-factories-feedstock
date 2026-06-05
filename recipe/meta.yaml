@@ -35,17 +35,17 @@ test:
     - pip check
   requires:
     - pip
-    - factory_boy >=3.2
-    - wagtail >=4.1
+    - factory_boy >=3.2,<4
+    - wagtail >=7.0
     - djangorestframework
     - django-taggit
-    - pytest ==6.2.5
-    - pytest-django ==4.5.0
-    - pytest-cov ==3.0.0
-    - pytest-pythonpath ==0.7.3
-    - coverage ==6.0
-    - ruff ==0.2.1
     - python {{ python_min }}
+    - pytest ==9.0.3
+    - pytest-django ==4.12.0
+    - pytest-cov ==7.1.0
+    - coverage ==7.13.5
+    - ruff ==0.15.12
+    - tox ==4.32.0
 
 about:
   home: https://github.com/wagtail/wagtail-factories/
